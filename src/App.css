@@ -1,8 +1,0 @@
-.App {
-  /* Estilos del layout principal de la aplicación */
-  /* Fuente profesional del sistema */
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  padding: 2rem;
-  background: transparent;
-  color: var(--text);
-}

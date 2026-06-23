@@ -1,0 +1,78 @@
+.header {
+  position: relative;
+  z-index: 10010; /* ensure header sits above full-page backgrounds */
+  background: rgba(7,20,31,0.92);
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  backdrop-filter: blur(6px);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoMark {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #06b6d4;
+  color: #07141f;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.logoImg {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.alias {
+  margin-left: 8px;
+  color: #60a5fa;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.brandName {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brandName {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.brandTag {
+  margin: 2px 0 0;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 720px) {
+  .headerContent { flex-wrap: wrap; align-items: flex-start; }
+  .brand { width: 100%; }
+  nav { width: 100%; }
+}

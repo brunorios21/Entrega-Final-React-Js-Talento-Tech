@@ -1,0 +1,42 @@
+.footer {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 0.6rem 1rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--text);
+  box-shadow: 0 -2px 8px rgba(2,6,23,0.18);
+}
+
+.footerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.footerTop { width: 100%; display: flex; gap: 3px; font-size: 12px; align-items: center; justify-content: center; }
+.footerTop h4 { margin: 0; font-weight: 700; color: var(--text); font-size: 13px; }
+.footerTop p { margin: 0; color: var(--muted); font-size: 11px; }
+
+.cards { display: none; }
+
+.links { display: flex; gap: 8px; align-items: center; justify-content: center; font-size: 11px; }
+.links a { color: #fff; text-decoration: none; font-weight: 700; letter-spacing: 0.6px; font-size: 13px; }
+
+/* Bottom bar with background image */
+.bottomBar{ position: relative; width: 100%; margin-top:12px; height: 96px; border-radius: 10px; overflow: hidden; }
+.bottomBar::before{ content: ''; position: absolute; inset: 0; background-image: url('/images/barra.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; transform: translateZ(0); filter: saturate(1.05) contrast(0.95); }
+.bottomOverlay{ position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,8,15,0.35), rgba(6,8,15,0.6)); mix-blend-mode: multiply; }
+.barContent{ position: relative; z-index: 2; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 18px; }
+.barContent .links{ justify-content: flex-start; }
+.barContent .copyright{ justify-content: flex-end; }
+
+.bottomBar a{ color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
+.copyright{ font-size: 12px; color: rgba(255,255,255,0.9); font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.45); }
+
+.copyright { font-size: 10px; color: var(--muted); margin-top: 2px; }

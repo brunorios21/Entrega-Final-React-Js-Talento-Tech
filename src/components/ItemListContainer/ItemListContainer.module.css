@@ -1,0 +1,32 @@
+:root{ --bg-opacity: 0.36 }
+.productsSection{ position: relative; overflow: hidden }
+.productsSection::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/fondoprin.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: var(--bg-opacity);
+  filter: brightness(0.95) saturate(1.08) contrast(1.06);
+  z-index: 0;
+  pointer-events: none;
+  transform-origin: center center;
+  animation: bg-kenburns 24s ease-in-out infinite alternate, bg-pan 40s linear infinite;
+}
+
+.productsSection > *{ position: relative; z-index: 1 }
+
+@keyframes bg-kenburns {
+  0% { transform: scale(1) translateY(0); }
+  100% { transform: scale(1.06) translateY(-3%); }
+}
+
+@keyframes bg-pan {
+  0% { background-position: center 10%; }
+  50% { background-position: right 30%; }
+  100% { background-position: center 10%; }
+}
+
+@media (max-width: 1024px){ .productsSection::before{ opacity: 0.18; background-position: center top } }

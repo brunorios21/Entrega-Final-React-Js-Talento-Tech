@@ -9,7 +9,7 @@ https://blackframestudio.netlify.app/
 email:
 brunorioscorp4@gmail.com
 contraseña: 
-brunorios00120
+bruno00120
 ## Características Principales
 
 * **Catálogo Dinámico:** Listado de productos con filtros por categoría cargados de forma eficiente desde Firebase Firestore.

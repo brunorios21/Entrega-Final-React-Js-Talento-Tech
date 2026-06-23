@@ -1,6 +1,6 @@
 # Black Frame Studio - E-Commerce Estudio Fotografico
 
-Proyecto desarrollado en React con Vite para la entrega final del curso de Desarrollo de Interfaces Web de Talento Tech. La aplicación consiste en una plataforma de comercio electrónico para una ferretería, integrada con Firebase para la gestión de productos, autenticación de usuarios y control de roles (administradores y empleados).
+Proyecto desarrollado en React con Vite para la entrega final del curso de Desarrollo de Interfaces Web de Talento Tech. La aplicación consiste en una plataforma de comercio electrónico para un estudio fotografico, integrada con Firebase para la gestión de productos, autenticación de usuarios y control de roles (administradores y empleados).
 ## Visualizar proyecto
 
 https://blackframestudio.netlify.app/

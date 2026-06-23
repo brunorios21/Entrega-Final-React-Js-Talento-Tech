@@ -1,0 +1,14 @@
+[
+  {"nombre":"Auriculares Wireless X1","precio":5999,"descripcion":"Auriculares bluetooth con cancelación de ruido.","imageUrl":"https://picsum.photos/seed/auriculares/800/600","categoria":"Audio","stock":25},
+  {"nombre":"Speaker Portátil Boom","precio":3999,"descripcion":"Speaker compacto, 12h de batería, resistente al agua.","imageUrl":"https://picsum.photos/seed/speaker/800/600","categoria":"Audio","stock":18},
+  {"nombre":"Smartwatch Active 2","precio":8999,"descripcion":"Reloj inteligente con pulsómetro y GPS integrado.","imageUrl":"https://picsum.photos/seed/smartwatch/800/600","categoria":"Wearables","stock":14},
+  {"nombre":"Cámara Instax Mini","precio":7499,"descripcion":"Cámara instantánea para fotos formato bolsillo.","imageUrl":"https://picsum.photos/seed/instax/800/600","categoria":"Fotografía","stock":12},
+  {"nombre":"Mouse Gamer Pro","precio":2499,"descripcion":"Mouse ergonómico 16000 DPI, RGB programable.","imageUrl":"https://picsum.photos/seed/mouse/800/600","categoria":"Periféricos","stock":40},
+  {"nombre":"Teclado Mecánico TKL","precio":5299,"descripcion":"Teclado compacto con switches azules.","imageUrl":"https://picsum.photos/seed/teclado/800/600","categoria":"Periféricos","stock":22},
+  {"nombre":"Mochila Urban 20L","precio":3599,"descripcion":"Mochila urbana con compartimento para laptop 15\".","imageUrl":"https://picsum.photos/seed/mochila/800/600","categoria":"Bags","stock":30},
+  {"nombre":"Cargador Rápido 30W","precio":1299,"descripcion":"Cargador USB-C PD 30W.","imageUrl":"https://picsum.photos/seed/cargador/800/600","categoria":"Accesorios","stock":60},
+  {"nombre":"Lámpara LED Desk","precio":2199,"descripcion":"Lámpara de escritorio con temperatura de color ajustable.","imageUrl":"https://picsum.photos/seed/lampara/800/600","categoria":"Hogar","stock":27},
+  {"nombre":"Auricular In-ear Sport","precio":1999,"descripcion":"Auriculares intrauditivos resistentes al sudor.","imageUrl":"https://picsum.photos/seed/in-ear/800/600","categoria":"Audio","stock":50},
+  {"nombre":"Tablet Mini 8\"","precio":12999,"descripcion":"Tablet ligera para lectura y multimedia.","imageUrl":"https://picsum.photos/seed/tablet/800/600","categoria":"Tablets","stock":9},
+  {"nombre":"Bolsa de Viaje XL","precio":4799,"descripcion":"Bolso de viaje con ruedas y compartimentos.","imageUrl":"https://picsum.photos/seed/bolsa/800/600","categoria":"Bags","stock":11}
+]

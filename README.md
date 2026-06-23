@@ -5,6 +5,11 @@ Proyecto desarrollado en React con Vite para la entrega final del curso de Desar
 
 https://blackframestudio.netlify.app/
 
+## Ingresar como administrador
+email:
+brunorioscorp4@gmail.com
+contraseña: 
+brunorios00120
 ## Características Principales
 
 * **Catálogo Dinámico:** Listado de productos con filtros por categoría cargados de forma eficiente desde Firebase Firestore.

@@ -1,45 +1,55 @@
-# Black Frame Studio - E-Commerce Estudio Fotografico
+# Black Frame Studio - E-Commerce Estudio Fotográfico
 
-Proyecto desarrollado en React con Vite para la entrega final del curso de Desarrollo de Interfaces Web de Talento Tech. La aplicación consiste en una plataforma de comercio electrónico para un estudio fotografico, integrada con Firebase para la gestión de productos, autenticación de usuarios y control de roles (administradores y empleados).
-## Visualizar proyecto
+Plataforma de comercio electrónico de alta fidelidad orientada a la comercialización de servicios visuales, alquiler de equipamiento y contratación de sesiones fotográficas profesionales. El sistema ha sido concebido como una solución integral que fusiona una experiencia de usuario fluida para el cliente final con una robusta interfaz de gestión interna para el personal técnico y administrativo.
 
-https://6a3b25972e15bf02bb054d8d--blackframestudio.netlify.app/
-## Ingresar como administrador
-email:
-brunorioscorp4@gmail.com
-contraseña: 
-bruno00120
-## Características Principales
+El desarrollo se encuentra estructurado bajo arquitectura de componentes desacoplados en React, utilizando Vite como empaquetador de alto rendimiento para optimizar los tiempos de carga y la renderización en el navegador. La persistencia de datos, el flujo de autenticación y la lógica de permisos se delegan en la infraestructura en la nube de Firebase, garantizando transacciones seguras y actualizaciones de estado en tiempo real.
 
-* **Catálogo Dinámico:** Listado de productos con filtros por categoría cargados de forma eficiente desde Firebase Firestore.
-* **Carrito de Compras:** Gestión de productos, cálculo de totales en tiempo real e incremento/decremento de cantidades.
-* **Autenticación Completa:** Registro e inicio de sesión de usuarios mediante Firebase Authentication.
-* **Panel de Administración (Backoffice):** Rutas protegidas según el rol del usuario que permiten gestionar el inventario de productos y visualizar los usuarios registrados.
-* **Diseño Responsivo:** Interfaz moderna adaptada a dispositivos móviles y escritorios utilizando React Bootstrap y Styled Components.
+## Visualización y Acceso al Sistema
 
-## Tecnologías Utilizadas
+La versión de producción se encuentra desplegada y disponible para su navegación pública a través del servicio de hosting de Netlify. Para evaluar las capacidades del sistema de permisos y el comportamiento de las interfaces restringidas, se proporcionan credenciales de acceso con nivel de privilegio máximo.
 
-* React (v18)
-* Vite
-* Firebase (Auth & Firestore v9)
-* React Router DOM (v6)
-* React Bootstrap & Bootstrap (v5)
-* Styled Components
+* **Demostración en Línea:** https://6a3b25972e15bf02bb054d8d--blackframestudio.netlify.app/
+* **Acceso Administrativo de Pruebas (Email):** brunorioscorp4@gmail.com
+* **Acceso Administrativo de Pruebas (Contraseña):** bruno00120
 
-## Estructura del Proyecto
+## Análisis Detallado del Sistema
 
-El código fuente principal se encuentra dentro de la carpeta del proyecto, organizada de la siguiente manera:
+La arquitectura de la plataforma se divide en dos grandes áreas funcionales que operan de manera síncrona mediante el consumo de servicios unificados.
 
-* `src/components/`: Componentes reutilizables de la interfaz (Cart, Auth, Admin, ItemList).
-* `src/context/`: Contextos globales de React para el manejo del estado del carrito y la autenticación.
-* `src/services/`: Capa de servicios para la comunicación directa con la base de datos de Firestore.
-* `src/config/`: Archivos de configuración local para variables del sistema y permisos.
-* `public/`: Archivos estáticos, imágenes de productos y vectores SVG.
+### Capa de Cliente y Flujo de Conversión
 
-## Configuración y Despliegue Local
+La interfaz pública expone un catálogo dinámico parametrizado por colecciones que se conecta directamente con Firestore. Las consultas optimizadas permiten segmentar los servicios fotográficos y productos por categorías específicas, minimizando la latencia de respuesta y el consumo de lecturas en la base de datos. 
 
-Para ejecutar el proyecto en un entorno de desarrollo local, se deben seguir los siguientes comandos en la terminal dentro de la carpeta correspondiente:
+El módulo de adquisición incluye un carrito de compras global administrado mediante la API de Context de React. Este estado persistente gestiona la lógica interna de validación de existencias, sumatoria matemática de aranceles en tiempo real, mutación de cantidades por ítem y el procesamiento estructurado para la generación de órdenes de compra unívocas.
 
-Instalar todas las dependencias declaradas en el archivo de configuración:
+### Capa Administrativa y Control de Acceso
+
+El ecosistema cuenta con un módulo de Backoffice protegido mediante un interceptor de rutas (Guards) basado en React Router DOM. El flujo valida la sesión activa del usuario contra el servicio de Firebase Authentication y realiza una verificación cruzada con el documento de identidad del usuario en la base de datos para recuperar su rol asignado.
+
+Los usuarios con rango de Administrador o Empleado acceden a un panel de control avanzado que otorga capacidades operativas de creación, lectura, actualización y borrado de registros sobre el inventario. Adicionalmente, el panel centraliza el monitoreo de los perfiles de usuarios registrados en el sistema para auditorías internas de operación.
+
+## Especificación Técnica
+
+* **Núcleo de la Aplicación:** React v18 y Vite.
+* **Manejo de Estado y Enrutamiento:** React Context API y React Router DOM v6.
+* **Infraestructura Cloud:** Firebase v9 (Módulos de Authentication y Firestore Database).
+* **Capa Estilística y Consistencia Visual:** Styled Components para el encapsulamiento de estilos CSS a nivel de componente y React Bootstrap v5 para la grilla adaptativa.
+
+## Organización del Repositorio
+
+La arquitectura del directorio de código fuente sigue los patrones de diseño modulares para aplicaciones SPA:
+
+* `src/components/`: Unidades de software visuales independientes y reutilizables encargadas de la renderización del carrito, formularios de acceso y vistas del panel de control.
+* `src/context/`: Proveedores de estado global que distribuyen los datos de autenticación y persistencia de artículos seleccionados sin incurrir en acoplamiento excesivo.
+* `src/services/`: Abstracción de llamadas API y consultas estructuradas hacia los SDKs de la base de datos en la nube.
+* `src/config/`: Archivos de inicialización tecnológica, asignación de variables de entorno y definición de políticas operativas.
+* `public/`: Almacenamiento de recursos estáticos del sistema, incluyendo vectores escalables y recursos gráficos base.
+
+## Ejecución en Entornos de Desarrollo
+
+Para inicializar de forma local el proyecto y auditar su comportamiento, es mandatorio contar con Node.js en el sistema y ejecutar la siguiente secuencia de comandos desde la terminal en el directorio raíz:
+
+Instalación de paquetes y dependencias del sistema:
 ```bash
 npm install
+$
